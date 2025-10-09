@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Program Files (x86)/Wisenet/SSM Client SDK/**)",
+      "Read(//c/Program Files (x86)/Wisenet/SSM Client SDK/Bin/**)",
+      "Read(//c/Program Files (x86)/Wisenet/SSM Client SDK/Bin/Debug/**)",
+      "Read(//c/Program Files (x86)/Wisenet/SSM Client SDK/Bin_x64/**)",
+      "Read(//c/Program Files (x86)/Wisenet/SSM Client SDK/Bin_x64/Debug/**)",
+      "Bash(dotnet build:*)",
+      "Bash(msbuild:*)",
+      "Bash(where msbuild)",
+      "Bash(\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe\" \"C:\\Program Files (x86)\\Wisenet\\SSM Client SDK\\Sample\\MultiMonitoringSample\\MultiMonitoringSample.csproj\" /p:Configuration=Debug /p:Platform=x64)",
+      "Bash(\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe\" \"C:\\Program Files (x86)\\Wisenet\\SSM Client SDK\\Sample\\MultiMonitoringSample\\MultiMonitoringSample.csproj\" -p:Configuration=Debug -p:Platform=x64)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

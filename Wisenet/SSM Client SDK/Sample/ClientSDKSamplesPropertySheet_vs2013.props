@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <CLIENT_SDK_LibPath>$(SolutionDir)lib\$(PlatformName)\$(Configuration)\</CLIENT_SDK_LibPath>
+    <CLIENT_SDK_IncludePath>$(SolutionDir)\include</CLIENT_SDK_IncludePath>
+    <CLIENT_SDK_ThirdParty_HOME>$(SolutionDir)..\..\lib.thirdparty\windows\</CLIENT_SDK_ThirdParty_HOME>
+    <CLIENT_SDK_ThirdParty_LibPath>$(CLIENT_SDK_ThirdParty_HOME)oscar\lib$(PlatformArchitecture)-msvc-12.0\lib\$(Configuration);</CLIENT_SDK_ThirdParty_LibPath>
+    <CLIENT_SDK_ThirdParty_IncludePath>$(CLIENT_SDK_ThirdParty_HOME)oscar;</CLIENT_SDK_ThirdParty_IncludePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(CLIENT_SDK_IncludePath);$(CLIENT_SDK_ThirdParty_IncludePath);</IncludePath>
+    <LibraryPath>$(CLIENT_SDK_LibPath);$(CLIENT_SDK_ThirdParty_LibPath);$(LibraryPath);</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(PlatformName)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>SsmEventSdkCLib.lib;SsmMediaSdkCLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_UNICODE;UNICODE;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="CLIENT_SDK_LibPath">
+      <Value>$(CLIENT_SDK_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CLIENT_SDK_IncludePath">
+      <Value>$(CLIENT_SDK_IncludePath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CLIENT_SDK_ThirdParty_HOME">
+      <Value>$(CLIENT_SDK_ThirdParty_HOME)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CLIENT_SDK_ThirdParty_LibPath">
+      <Value>$(CLIENT_SDK_ThirdParty_LibPath)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CLIENT_SDK_ThirdParty_IncludePath">
+      <Value>$(CLIENT_SDK_ThirdParty_IncludePath)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
