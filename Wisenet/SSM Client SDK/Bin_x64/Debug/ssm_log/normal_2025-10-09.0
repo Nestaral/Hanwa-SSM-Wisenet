@@ -1,0 +1,17 @@
+2025-10-09 09:32:10.617 [DEBUG] TID[1] PID[54416] [1][TSM.SDK.NULL] 
+=====================SYSTEM INFO========================
+PID : 54416
+S/W Version : SDK_2.13.00_241112
+OS Version : Microsoft Windows NT 6.2.9200.0
+64bit OS : True
+Working Dir : C:\Users\Mathi\SourceCode\Hanwa SSM Wisenet\Wisenet\SSM Client SDK\Bin_x64\Debug
+Current Disk Info : AvailableFreeSpace(513869,8 MB) / TotalSize(874260,3 MB)
+=========================================================
+
+2025-10-09 09:32:20.653 [DEBUG] TID[11] PID[54416] [1][TSM.SDK.NULL] 
+[LOGGER] Save Days : 30, Save Max Size : 10 GB
+
+2025-10-09 09:32:20.657 [DEBUG] TID[11] PID[54416] [1][TSM.SDK.NULL] [LOGGER] Current Disk Info : AvailableFreeSpace(501,826141357422 GB) / TotalSize(853,7698 GB)
+
+2025-10-09 09:32:21.213 [DEBUG] TID[1] PID[54416] [1][TSM.SDK.HTW] [CLIENT_SDK] MQServiceImplementation Release() 09:32:21.211 - Start
+2025-10-09 09:32:21.399 [DEBUG] TID[1] PID[54416] [1][TSM.SDK.HTW] [CLIENT_SDK] MQServiceImplementation Release() 09:32:21.397 - End
