@@ -1,0 +1,90 @@
+<log4net>
+  <!-- Common -->
+  <appender name="Console" type="log4net.Appender.ConsoleAppender">
+    <layout type="log4net.Layout.PatternLayout">     
+      <conversionPattern value="%date{yyyy-MM-dd HH:mm:ss.fff} %7[%level] [%thread] - %message%newline" />
+    </layout>
+  </appender>
+
+  <!-- Media Gateway -->
+  <!-- Client -->
+  <appender name="NormalAppender" type="log4net.Appender.RollingFileAppender">
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <file type="log4net.Util.PatternString" value="%property{LogPath}/normal" />
+    <datePattern value="_yyyy-MM-dd"/>
+    <staticLogFileName value="false" />
+    <appendToFile value="true" />
+    <rollingStyle value="Composite"/>
+    <maxSizeRollBackups value="-1" />
+    <countDirection value="1"/>
+    <maximumFileSize value="10MB" />
+    <!--<preserveLogFileNameExtension value="true" />-->
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date{yyyy-MM-dd HH:mm:ss.fff} %7[%level] TID[%thread] %message%newline" />
+    </layout>
+  </appender>
+
+  <appender name="PeriodicAppender" type="log4net.Appender.RollingFileAppender">
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <file type="log4net.Util.PatternString" value="%property{LogPath}/periodic" />
+    <datePattern value="_yyyy-MM-dd"/>
+    <staticLogFileName value="false" />
+    <appendToFile value="true" />
+    <rollingStyle value="Composite"/>
+    <maxSizeRollBackups value="-1" />
+    <countDirection value="1"/>
+    <maximumFileSize value="10MB" />
+    <!--<preserveLogFileNameExtension value="true" />-->
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date{yyyy-MM-dd HH:mm:ss.fff} %7[%level] TID[%thread] %message%newline" />
+    </layout>
+  </appender>
+
+  <logger name="Periodic">
+    <level value="DEBUG"/>
+    <!--<appender-ref ref="Console" />-->
+    <appender-ref ref="PeriodicAppender" />
+  </logger>
+
+  <logger name="Normal">
+    <level value="DEBUG" />
+    <!--<appender-ref ref="Console" />-->
+    <appender-ref ref="NormalAppender" />
+  </logger>
+
+
+  <!-- Stub -->
+  <appender name="RollingFileMq" type="log4net.Appender.RollingFileAppender">
+    <file type="log4net.Util.PatternString" value="%property{LogPath}/stub/mqStub" />
+    <datePattern value="_yyyy-MM-dd.'log'"/>
+    <staticLogFileName value="false" />
+    <appendToFile value="true" />
+    <rollingStyle value="Date"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date %7[%level] [%thread] - %message%newline" />
+    </layout>
+  </appender>
+
+  <appender name="EventLogAppender" type="log4net.Appender.RollingFileAppender">
+    <maximumFileSize value="1KB" />
+    <file type="log4net.Util.PatternString" value="%property{LogPath}/stub/mqMessage" />
+    <datePattern value="_yyyy-MM-dd.'log'"/>
+    <staticLogFileName value="false" />
+    <appendToFile value="true" />
+    <rollingStyle value="Date"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date %7[%level] [%thread] - %message%newline" />
+    </layout>
+  </appender>
+
+  <logger name="StubLogger" additivity="False">
+    <level value="INFO" />
+    <appender-ref ref="RollingFileMq" />
+  </logger>
+
+  <logger name="StubEventLogger" additivity="False">
+    <level value="INFO" />
+    <appender-ref ref="EventLogAppender" />
+  </logger>
+
+</log4net>

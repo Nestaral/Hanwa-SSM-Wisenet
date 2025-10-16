@@ -1,0 +1,34 @@
+2025-10-06 13:16:17.436 [DEBUG] TID[1] PID[45060] [1][TSM.SDK.NULL] 
+=====================SYSTEM INFO========================
+PID : 45060
+S/W Version : SDK_2.13.00_241112
+OS Version : Microsoft Windows NT 6.2.9200.0
+64bit OS : True
+Working Dir : C:\Program Files (x86)\Wisenet\SSM Client SDK\Bin_x64\Debug
+Current Disk Info : AvailableFreeSpace(514319,6 MB) / TotalSize(874260,3 MB)
+=========================================================
+
+2025-10-06 13:16:27.449 [DEBUG] TID[11] PID[45060] [1][TSM.SDK.NULL] 
+[LOGGER] Save Days : 30, Save Max Size : 10 GB
+
+2025-10-06 13:16:27.450 [DEBUG] TID[11] PID[45060] [1][TSM.SDK.NULL] [LOGGER] Current Disk Info : AvailableFreeSpace(502,265228271484 GB) / TotalSize(853,7698 GB)
+
+2025-10-06 13:16:27.759 [DEBUG] TID[1] PID[45060] [1][TSM.SDK.HTW] [CLIENT_SDK] MQServiceImplementation Release() 01:16:27.758 - Start
+2025-10-06 13:16:27.822 [DEBUG] TID[1] PID[45060] [1][TSM.SDK.HTW] [CLIENT_SDK] MQServiceImplementation Release() 01:16:27.822 - End
+2025-10-06 13:17:51.406 [DEBUG] TID[1] PID[20088] [1][TSM.SDK.NULL] 
+=====================SYSTEM INFO========================
+PID : 20088
+S/W Version : SDK_2.13.00_241112
+OS Version : Microsoft Windows NT 6.2.9200.0
+64bit OS : True
+Working Dir : C:\Program Files (x86)\Wisenet\SSM Client SDK\Bin_x64\Debug
+Current Disk Info : AvailableFreeSpace(514310,2 MB) / TotalSize(874260,3 MB)
+=========================================================
+
+2025-10-06 13:18:01.424 [DEBUG] TID[11] PID[20088] [1][TSM.SDK.NULL] 
+[LOGGER] Save Days : 30, Save Max Size : 10 GB
+
+2025-10-06 13:18:01.425 [DEBUG] TID[11] PID[20088] [1][TSM.SDK.NULL] [LOGGER] Current Disk Info : AvailableFreeSpace(502,253662109375 GB) / TotalSize(853,7698 GB)
+
+2025-10-06 13:18:02.820 [DEBUG] TID[1] PID[20088] [1][TSM.SDK.HTW] [CLIENT_SDK] MQServiceImplementation Release() 01:18:02.819 - Start
+2025-10-06 13:18:02.825 [DEBUG] TID[1] PID[20088] [1][TSM.SDK.HTW] [CLIENT_SDK] MQServiceImplementation Release() 01:18:02.825 - End
